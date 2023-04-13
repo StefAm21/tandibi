@@ -5,12 +5,14 @@ ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+# gem 'rails', '6.0.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg", '>= 0.18', '< 2.0'
+gem 'activerecord-postgis-adapter', '~> 8.0', '>= 8.0.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"

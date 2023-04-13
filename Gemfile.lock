@@ -54,6 +54,9 @@ GEM
     activerecord (7.0.4.3)
       activemodel (= 7.0.4.3)
       activesupport (= 7.0.4.3)
+    activerecord-postgis-adapter (8.0.1)
+      activerecord (~> 7.0.0)
+      rgeo-activerecord (~> 7.0.0)
     activestorage (7.0.4.3)
       actionpack (= 7.0.4.3)
       activejob (= 7.0.4.3)
@@ -160,6 +163,10 @@ GEM
     rake (13.0.6)
     reline (0.3.3)
       io-console (~> 0.5)
+    rgeo (3.0.0)
+    rgeo-activerecord (7.0.1)
+      activerecord (>= 5.0)
+      rgeo (>= 1.0.0)
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.4)
@@ -208,13 +215,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-postgis-adapter (~> 8.0, >= 8.0.1)
   annotate (~> 3)
   bootsnap
   debug
   factory_bot_rails (~> 5)
   importmap-rails
   jbuilder
-  pg (~> 1.1)
+  pg (>= 0.18, < 2.0)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   rspec-rails (~> 3.9)
